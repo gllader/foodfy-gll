@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body {
+    font-family: "Roboto";
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 115px;
+}
+
+header {
+  margin-top: 28px;
+  display: flex;
+  align-content: flex-start;
+}
+header img {
+  max-width: 91px;
+  margin-right: 122px;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #111111;
+  margin-left: 30px;
+}
+
+footer {
+  background-color: #eeeeee;
+  color: #999999;
+  height: 62px;
+  width: 100%;
+  position: absolute;
+}
+
+footer p {
+  padding-top: 23px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+/* banner*/
+.banner {
+  background-color: #fbdfdb;
+  max-width: 940px;
+  max-height: 366px;
+  margin-top: 30px;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.banner-text {
+  margin-left: 60px;
+  margin-top: 117px;
+}
+.banner-text h1 {
+  font-size: 32px;
+  line-height: 38px;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 70%;
+  max-width: 316px;
+}
+.banner img {
+  margin-top: 66px;
+  margin-left: 100px;
+}
+
+/* Cards */
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 28px;
+}
+
+.cards {
+  max-width: 940px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  grid-row-gap: 93px;
+}
+
+.card {
+  width: 300px;
+  height: 140px;
+}
+
+.card-img img{
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.card-img img:hover {
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-autor {
+  font-size: 14px;
+  line-height: 16px;
+  color: #777777;
+}
+
