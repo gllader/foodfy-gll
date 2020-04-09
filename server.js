@@ -1,33 +1,20 @@
 const express = require('express');
-const nunjucks = require('nunjucks')
+const nunjucks = require('nunjucks');
+const routes = require('./routes');
 const server = express();
+const methodOverride = require('method-override');
 const PORT = 5000;
-const receitas = require('./data')
 
 server.set('view engine', 'njk');
-server.use(express.static('public'))
+server.use(express.static('public'));
+server.use(express.urlencoded({extended: true}));
+server.use(methodOverride('_method'));
+server.use(routes);
 
 nunjucks.configure('views', {
     express: server,
+    autoescape: false,
     noCache: true
-})
-
-server.get('/', (req, res)=>{
-    res.render('home', {receitas});
-})
-
-server.get('/recipes', (req, res)=>{
-    res.render('recipes', {receitas})
-})
-
-server.get('/recipes/:id', (req, res)=>{
-    const recipeId = req.params.id;   
-    const recipes = receitas[recipeId];
-    res.render('id', {recipes} )
-})
-
-server.get('/about', (req, res)=>{
-    res.render('about');
 })
 
 server.listen(PORT, ()=>{

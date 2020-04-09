@@ -1,0 +1,16 @@
+header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+.logo{
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 27px;
+}
+
+.title-margin {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

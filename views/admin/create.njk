@@ -1,0 +1,57 @@
+{% extends 'admin/header.njk' %}
+{% block head %}
+    <title>Create Recipe</title>
+    <link rel="stylesheet" href="/create.css"/>
+    <link rel="stylesheet" href="/header.css"/>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h2>Criando Receita</h2>
+    <form action="/admin/recipes" method="post">
+        <div>
+            <button type="submit" class="submit">Salvar receita</button>
+        </div>
+
+        <div class="item">
+            <div>
+                <h3>Imagem da receita</h3>
+            </div>
+            <div><input type="url" name="image"></div>
+        </div>
+
+        <div id="ingredients">
+            <div>
+                <h3>Ingredientes</h3>
+            </div>
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value=""/>
+            </div>
+        </div>
+        <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+
+        <div id="preparations">
+            <div>
+                <h3>Modo de Preparo</h3>
+            </div>
+            <div class="preparation">
+                <input type="text" name="preparations[]" value=""/>
+            </div>
+        </div>
+        <button type="button" class="add-preparation">Add preparation</button>
+
+        <div class="item">
+            <div>
+                <h3>Informações Adicionais</h3>
+            </div>
+            <div>
+                <textarea name="information" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script src="/scripts.js"></script>
+<footer></footer>
+{% endblock content %}
