@@ -1,0 +1,58 @@
+{% extends 'admin/header.njk' %}
+{% block head %}
+    <title>Recipes</title>
+    <link rel="stylesheet" href="/id.css">
+    <link rel="stylesheet" href="/header.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="edit">
+            <h2>Receita:
+                {{recipe.title}}</h2>
+            <a href="/admin/recipes/{{recipe.id}}/edit" class='btn-edit'>Editar Receita</a>
+        </div>
+        <div class="recipe-img no-margin">
+            <img src="{{recipe.image}}" alt="image of {{recipe.title}}">
+        </div>
+        <div class="title">
+            <div>
+                <h1>{{recipe.title}}</h1>
+            </div>
+            <div>
+                <p>por
+                    {{recipe.author}}</p>
+            </div>
+        </div>
+        <div class="ingredients-title"></div>
+        <div class="block">
+            <h2>Ingredientes</h2>
+        </div>
+        <div class="recipe">
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="prep-title"></div>
+        <div class="block">
+            <h2>Modo de preparo</h2>
+        </div>
+        <div class="recipe">
+            <ul>
+                {% for preparations in recipe.preparations %}
+                    <li>{{preparations}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="info-title block">
+            <h2>Informações adicionais</h2>
+            <div class="info">
+                {{recipe.information}}
+            </div>
+        </div>
+    </div>
+{% endblock %}
