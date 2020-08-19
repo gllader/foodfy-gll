@@ -1,0 +1,34 @@
+{% include 'chefs/header.njk' %}
+{% block head %}
+  <title>Chefs List</title>
+  <link rel="stylesheet" href="/chefsadmin.css">
+  <link rel="stylesheet" href="/header.css">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <a class="button" href="/admin/chefs/create">Novo chef</a>
+    <h2 class="title-margin">Gerenciar Chefs</h2>
+    <div class="content">
+      <section class="cards">
+        {% for chef in chefs %}
+          <div class="card" id={{loop.index}}>
+            <div class="card-img">
+              <img src="{{chef.avatar_url}}" alt="img of {{chef.title}}"/>
+            </div>
+            <div class='card-content'>
+              <div class="card-title">
+                <p>{{chef.name}}</p>
+              </div>
+              <div class="card-link" >
+                <a href="/admin/chefs/{{loop.index}}">Visualizar</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+    <!-- fim Content-->
+  </div>
+</div>
+{% endblock %}

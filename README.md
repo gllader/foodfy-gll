@@ -6,7 +6,7 @@ Foodfy project for Rocketseat bootcamp
 ![Last-commit][last-commit]
 ![Repo-size][repo-size]
 
-This project uses NodeJS and Express Framework for backend and Nunjuks for the views. You can create recipes and 
+This project uses NodeJS and Express Framework for backend and Nunjuks for the views. 
 
 <center>
   <img src="https://raw.githubusercontent.com/gllader/foodfy-gll/master/frontend-food.png">

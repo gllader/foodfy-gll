@@ -1,7 +1,9 @@
-const receitas = require('../../data');
+const Guest = require('../models/Guest')
 
 exports.index = (req, res)=>{
-  return res.render("guest/home", {receitas});
+  Guest.list((recipes)=>{
+  return res.render("guest/home", {recipes});
+  })
 };
 
 exports.about = (req, res)=>{
@@ -9,11 +11,15 @@ exports.about = (req, res)=>{
 };
 
 exports.list = (req, res)=>{
-  res.render('recipes', {receitas});
+  Guest.list((recipes)=>{
+    res.render('guest/recipes', {recipes});
+  })
 };
 
 exports.id = (req, res)=>{
-  const recipeId = req.params.id;   
-  const recipes = receitas[recipeId];
-  res.render('guest/id', {recipes} )
+  Guest.list((recipes)=>{
+    const { id } = req.params;
+    recipes = recipes[id];
+    res.render('guest/id', {recipes})
+  })
 };

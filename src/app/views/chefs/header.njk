@@ -8,15 +8,16 @@
 </head>
 <body>
     <header>
-    <div class="logo">
+    <div class="menu">
         <a href="/"><img src="/assets/logo-white.png" alt="logo-foodfy"/></a>
-</div>
-
-    {% block content %}
+        <div class="links">
+            <a href="/admin/recipes" >RECEITAS</a>
+            <a href="/admin/chefs" >CHEFS</a>
+        </div>
+    </div>
+</header>
+{% block content %}
     
     {% endblock content %}
-
-
-</header>
 </body>
 </html>

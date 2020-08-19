@@ -1,0 +1,39 @@
+{% extends 'chefs/header.njk' %}
+{% block head %}
+    <title>Create Recipe</title>
+    <link rel="stylesheet" href="/create.css"/>
+    <link rel="stylesheet" href="/header.css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h2>Editando Chefs</h2>
+
+        <form class="form-delete" action="/admin/chefs?_method=DELETE" method="post">
+            <input type="hidden" name="id" value="{{recipe.id}}">
+            <button type="submit">Deletar</button>
+        </form>
+        <form action="/admin/chefs?_method=PUT" method="post">
+            <div>
+                <button type="submit" class="submit">Salvar chef</button>
+            </div>
+
+             <div class="item">
+            <div>
+                <h3>Nome</h3>
+            </div>
+            <div><input type="text" name="name"></div>
+        </div>
+
+        <div class="item">
+            <div>
+                <h3>Avatar</h3>
+            </div>
+            <div><input type="url" name="avatar"></div>
+        </div>
+
+        </form>
+    </div>
+
+    <script src="/scripts.js"></script>
+{% endblock content %}

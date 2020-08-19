@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Roboto";
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 115px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 28px;
+}
+
+.button {
+  position: absolute;
+    top: 110px;
+    right: 490px;
+    border: 0;
+    background-color: #6558C3;
+    color: #fff;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Chef Cards */
+
+.content .cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.card-content {
+  margin-left: 20px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #111111;
+}
+
+.card-link a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #6558C3;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.card{
+  display: flex;
+}

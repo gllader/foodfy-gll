@@ -1,17 +1,16 @@
-{% include 'admin/header.njk' %}
+{% extends 'recipes/header.njk' %}
 {% block head %}
   <title>Recipes List</title>
   <link rel="stylesheet" href="/admin.css">
   <link rel="stylesheet" href="/header.css">
-{% endblock %}
+{% endblock head %}
 
 {% block content %}
-  <h1>{{recipe.author}}</h1>
   <div class="container">
     <h2 class="title-margin">Gerenciar Receitas</h2>
     <div class="content">
       <section class="cards">
-        {% for recipe in recipe %}
+        {% for recipe in recipes %}
           <div class="card" id={{loop.index}}>
             <div class="card-img">
               <img src="{{recipe.image}}" alt="img of {{recipe.title}}"/>
@@ -22,19 +21,16 @@
               </div>
               <div class="card-autor">
                 por
-                {{recipe.author}}
+                {{recipe.chef_name}}
               </div>
-              <div class="card-link" >
+              <div class="card-link">
                 <a href="/admin/recipes/{{loop.index}}">Visualizar</a>
               </div>
             </div>
-
           </div>
         {% endfor %}
-
       </section>
     </div>
-    <!-- fim Content-->
   </div>
 </div>
 {% endblock %}
